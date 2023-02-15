@@ -2,19 +2,22 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 //styles
-const illustWidth = "32rem";
+const imageWidth = "32rem";
 const Main = styled.div`
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 const Base = styled.div`
-  width: ${illustWidth};
+  max-width: ${imageWidth};
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 `;
 const OverLay = styled.div`
-  width: ${illustWidth};
+  max-width: ${imageWidth};
   position: absolute;
   top: 0;
   left: 0;
@@ -26,8 +29,11 @@ const OverLay = styled.div`
     opacity: 0.3;
   }
 `;
+const Center = styled.div`
+  max-width: ${imageWidth};
+  position: relative;
+`;
 const Dummy = styled.div`
-  width: ${illustWidth};
   opacity: 0;
 `;
 const Logo = () => {
@@ -52,15 +58,17 @@ const Logo = () => {
 
   return (
     <Main>
-      <OverLay className={`${isAnim ? "isAnim" : ""}`}>
-        <img src="images/logoOverLay.png" alt="" />
-      </OverLay>
-      <Base>
-        <img src="images/logo.png" alt="" />
-      </Base>
-      <Dummy>
-        <img src="images/logo.png" alt="" />
-      </Dummy>
+      <Center>
+        <OverLay className={`${isAnim ? "isAnim" : ""}`}>
+          <img src="images/logoOverLay.png" alt="" />
+        </OverLay>
+        <Base>
+          <img src="images/logo.png" alt="" />
+        </Base>
+        <Dummy>
+          <img src="images/logo.png" alt="" />
+        </Dummy>
+      </Center>
     </Main>
   );
 };

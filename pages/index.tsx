@@ -22,6 +22,7 @@ const Home: NextPage = () => {
     top: 0;
     left: 0;
     z-index: 3;
+    overflow: hidden;
   `;
   const Contents = styled.div`
     width: 100%;
@@ -69,7 +70,7 @@ const Home: NextPage = () => {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 4rem;
+    top: 28rem;
     z-index: 2;
   `;
   const IconLayer = styled.div`
@@ -112,9 +113,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>MCLVXI</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Container>
-        <Main>
+        <Main className="main">
           <Contents>
             <IllustLayer>
               <Illust></Illust>
