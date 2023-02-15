@@ -75,7 +75,7 @@ const Home: NextPage = () => {
     top: 33rem;
     z-index: 2;
     @media screen and (max-width: 480px) {
-      top: 31rem;
+      top: 29.8rem;
     }
   `;
   const IconLayer = styled.div`

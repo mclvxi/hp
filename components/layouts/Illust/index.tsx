@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 //styles
 const illustWidth = "22rem";
+const spIllustWidth = "18rem";
 const Main = styled.div`
   position: relative;
 `;
@@ -12,6 +13,9 @@ const Base = styled.div`
   top: 0;
   left: 0;
   z-index: 1;
+  @media screen and (max-width: 480px) {
+    width: ${spIllustWidth};
+  }
 `;
 const OverLay = styled.div`
   width: ${illustWidth};
@@ -20,14 +24,20 @@ const OverLay = styled.div`
   left: 0;
   z-index: 2;
   opacity: 0;
-  transition: all 3s ease;
+  transition: opacity 3s ease;
   &.isAnim {
     opacity: 1;
+  }
+  @media screen and (max-width: 480px) {
+    width: ${spIllustWidth};
   }
 `;
 const Dummy = styled.div`
   width: ${illustWidth};
   opacity: 0;
+  @media screen and (max-width: 480px) {
+    width: ${spIllustWidth};
+  }
 `;
 
 const Illust = () => {
