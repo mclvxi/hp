@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 //styles
-const illustWidth = "32rem";
+const illustWidth = "22rem";
 const Main = styled.div`
   position: relative;
 `;

@@ -60,8 +60,10 @@ const Home: NextPage = () => {
   `;
   const IllustLayer = styled.div`
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 1;
   `;
@@ -70,8 +72,11 @@ const Home: NextPage = () => {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 28rem;
+    top: 33rem;
     z-index: 2;
+    @media screen and (max-width: 480px) {
+      top: 31rem;
+    }
   `;
   const IconLayer = styled.div`
     width: 100%;
@@ -97,6 +102,16 @@ const Home: NextPage = () => {
       src: "images/displayIcon/nikoIcon.png",
       isArrow: true,
       href: "https://com.nicovideo.jp/community/co1926054",
+    },
+    {
+      src: "images/displayIcon/pixivIcon.png",
+      isArrow: true,
+      href: "https://www.pixiv.net/users/3279399",
+    },
+    {
+      src: "images/displayIcon/soundCloudIcon.png",
+      isArrow: true,
+      href: "https://soundcloud.com/iyha_mclvxi",
     },
   ];
 
