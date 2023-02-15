@@ -24,9 +24,11 @@ const OverLay = styled.div`
   left: 0;
   z-index: 2;
   opacity: 0;
-  transition: opacity 3s ease;
+  transform: scale(1);
+  transition: all 3s ease;
   &.isAnim {
     opacity: 1;
+    transform: scale(0.99);
   }
   @media screen and (max-width: 480px) {
     width: ${spIllustWidth};

@@ -24,9 +24,11 @@ const OverLay = styled.div`
   z-index: 2;
   mix-blend-mode: hard-light;
   opacity: 1;
+  transform: scale(1);
   transition: all 3s ease;
   &.isAnim {
     opacity: 0.3;
+    transform: scale(0.97);
   }
 `;
 const Center = styled.div`
