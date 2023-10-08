@@ -24,13 +24,13 @@ const Container = styled.div`
   const CoverBg = styled.div`
     width: 100%;
     height: 100%;
-    background: linear-gradient(
+    /* background: linear-gradient(
       360deg,
       #3d4b6d 0%,
       #9cd0aa 35%,
       #7d96b5 61%,
       #795451 100%
-    );
+    ); */
     mix-blend-mode: hard-light;
     position: absolute;
     top: 0;
