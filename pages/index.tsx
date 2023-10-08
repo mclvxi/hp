@@ -1,7 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState, Fragment } from "react";
-import styled from "styled-components";
+import displayIconsData from "../data/displayIcons.json";
+
+//style
+import Styles from "./style";
 
 //components
 import Footer from "../components/layouts/Footer";
@@ -11,110 +14,6 @@ import Loading from "../components/Parts//Loading";
 import DisplayIcon from "../components/elements/DisplayIcon";
 
 const Home: NextPage = () => {
-  const Container = styled.div`
-    width: 100%;
-    height: 100%;
-  `;
-  const Main = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    overflow: hidden;
-  `;
-  const Contents = styled.div`
-    width: 100%;
-    height: calc(100% - 2.8rem);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-  `;
-  const CoverBg = styled.div`
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      360deg,
-      #3d4b6d 0%,
-      #9cd0aa 35%,
-      #7d96b5 61%,
-      #795451 100%
-    );
-    mix-blend-mode: hard-light;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 10%;
-    z-index: 2;
-  `;
-  const Bg = styled.div`
-    width: 100%;
-    height: 100%;
-    background: #181818;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  `;
-  const IllustLayer = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  `;
-  const LogoLayer = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 33rem;
-    z-index: 2;
-    @media screen and (max-width: 480px) {
-      top: 29.8rem;
-    }
-  `;
-  const IconLayer = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    padding: 3rem 2rem;
-    display: flex;
-    flex-flow: column;
-    gap: 1.3rem;
-  `;
-
-  //static
-  const displayIcons = [
-    {
-      src: "images/displayIcon/twitterIcon.png",
-      isArrow: true,
-      href: "https://twitter.com/atuiringo",
-    },
-    {
-      src: "images/displayIcon/nikoIcon.png",
-      isArrow: true,
-      href: "https://com.nicovideo.jp/community/co1926054",
-    },
-    {
-      src: "images/displayIcon/pixivIcon.png",
-      isArrow: true,
-      href: "https://www.pixiv.net/users/3279399",
-    },
-    {
-      src: "images/displayIcon/soundCloudIcon.png",
-      isArrow: true,
-      href: "https://soundcloud.com/iyha_mclvxi",
-    },
-  ];
-
   //state
   const [loading, setLoading] = useState(false);
 
@@ -130,17 +29,17 @@ const Home: NextPage = () => {
         <title>MCLVXI</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Container>
-        <Main className="main">
-          <Contents>
-            <IllustLayer>
+      <Styles.Container>
+        <Styles.Main className="main">
+          <Styles.Contents>
+            <Styles.IllustLayer>
               <Illust></Illust>
-            </IllustLayer>
-            <LogoLayer>
+            </Styles.IllustLayer>
+            <Styles.LogoLayer>
               <Logo></Logo>
-            </LogoLayer>
-            <IconLayer>
-              {displayIcons.map((_, i) => {
+            </Styles.LogoLayer>
+            <Styles.IconLayer>
+              {displayIconsData.displayIcons.map((_, i) => {
                 return (
                   <Fragment key={i}>
                     <DisplayIcon
@@ -151,13 +50,13 @@ const Home: NextPage = () => {
                   </Fragment>
                 );
               })}
-            </IconLayer>
-          </Contents>
+            </Styles.IconLayer>
+          </Styles.Contents>
           <Footer></Footer>
-        </Main>
-        <CoverBg></CoverBg>
-        <Bg></Bg>
-      </Container>
+        </Styles.Main>
+        <Styles.CoverBg></Styles.CoverBg>
+        <Styles.Bg></Styles.Bg>
+      </Styles.Container>
     </>
   );
 };

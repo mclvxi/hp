@@ -1,0 +1,24 @@
+{
+    "displayIcons":[
+        {
+            "src": "images/displayIcon/twitterIcon.png",
+            "isArrow": true,
+            "href": "https://twitter.com/atuiringo"
+          },
+          {
+            "src": "images/displayIcon/nikoIcon.png",
+            "isArrow": true,
+            "href": "https://com.nicovideo.jp/community/co1926054"
+          },
+          {
+            "src": "images/displayIcon/pixivIcon.png",
+            "isArrow": true,
+            "href": "https://www.pixiv.net/users/3279399"
+          },
+          {
+            "src": "images/displayIcon/soundCloudIcon.png",
+            "isArrow": true,
+            "href": "https://soundcloud.com/iyha_mclvxi"
+          }
+    ]
+}
