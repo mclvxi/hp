@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useEffect, useState, Fragment } from "react";
 
 //style
-import Styles from "./style";
+import Styles from "../styles/pages";
 
 //components
 import Footer from "../components/layouts/Footer";
