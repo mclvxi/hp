@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState, Fragment } from "react";
-import { displayIcons } from "../data/displayIcons.json";
 
 //style
 import Styles from "./style";
@@ -14,6 +13,29 @@ import Loading from "../components/Parts//Loading";
 import DisplayIcon from "../components/elements/DisplayIcon";
 
 const Home: NextPage = () => {
+
+  const displayIcons = [
+    {
+        "src": "images/displayIcon/twitterIcon.png",
+        "isArrow": true,
+        "href": "https://twitter.com/atuiringo"
+      },
+      {
+        "src": "images/displayIcon/nikoIcon.png",
+        "isArrow": true,
+        "href": "https://com.nicovideo.jp/community/co1926054"
+      },
+      {
+        "src": "images/displayIcon/pixivIcon.png",
+        "isArrow": true,
+        "href": "https://www.pixiv.net/users/3279399"
+      },
+      {
+        "src": "images/displayIcon/soundCloudIcon.png",
+        "isArrow": true,
+        "href": "https://soundcloud.com/iyha_mclvxi"
+      }
+]
   //state
   const [loading, setLoading] = useState(false);
 
