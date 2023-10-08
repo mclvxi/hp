@@ -8,7 +8,6 @@ import Styles from "./style";
 //components
 import Footer from "../components/layouts/Footer";
 import Illust from "../components/layouts/Illust";
-// import Logo from "../components/layouts/Logo";
 import Loading from "../components/Parts//Loading";
 import DisplayIcon from "../components/elements/DisplayIcon";
 
@@ -57,9 +56,6 @@ const Home: NextPage = () => {
             <Styles.IllustLayer>
               <Illust></Illust>
             </Styles.IllustLayer>
-            {/* <Styles.LogoLayer>
-              <Logo></Logo>
-            </Styles.LogoLayer> */}
             <Styles.IconLayer>
               {displayIcons.map((_, i) => {
                 return (
